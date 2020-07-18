@@ -8,7 +8,7 @@
 import setuptools
 
 setuptools.setup(name='musicalrobot',
-    version='0.978',
+    version='0.979',
     url = 'https://github.com/pozzocapstone/musical-robot',
     license = 'MIT',
     author = 'Shrilakshmi Bonageri, Jaime Rodriguez, Sage Scheiwiller',
@@ -25,6 +25,11 @@ setuptools.setup(name='musicalrobot',
                         'scikit-learn',
                         'scipy',
                         'matplotlib',
-                        'h5py'],
+                        'h5py',
+                        'Keras',
+                        'tensorflow',
+                        'tensorflow-estimator',
+                        'Keras-Applications',
+                        'Keras-Preprocessing'],
     zip_safe = False,
 )
