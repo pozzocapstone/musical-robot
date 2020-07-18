@@ -1,0 +1,644 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Musical Robot &mdash; Musical Robot June 2019 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Musical Robot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Musical Robot</a></li>
+<li><a class="reference internal" href="#modules">Modules</a><ul>
+<li><a class="reference internal" href="#module-musicalrobot.edge_detection">edge_detection</a></li>
+<li><a class="reference internal" href="#module-musicalrobot.pixel_analysis">pixel_analysis</a></li>
+<li><a class="reference internal" href="#module-musicalrobot.post_data">post_data</a></li>
+<li><a class="reference internal" href="#module-musicalrobot.irtemp">irtemp</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Musical Robot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Musical Robot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="musical-robot">
+<h1>Musical Robot<a class="headerlink" href="#musical-robot" title="Permalink to this headline">¶</a></h1>
+<p>Start by reading the README.md file here: <a class="reference external" href="https://github.com/pozzocapstone/musical-robot/blob/master/README.md">https://github.com/pozzocapstone/musical-robot/blob/master/README.md</a>
+and then check out the usage in examples folder.</p>
+</div>
+<div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-musicalrobot.edge_detection">
+<span id="edge-detection"></span><h2>edge_detection<a class="headerlink" href="#module-musicalrobot.edge_detection" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="musicalrobot.edge_detection.edge_detection">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">edge_detection</code><span class="sig-paren">(</span><em class="sig-param">flip_frames</em>, <em class="sig-param">n_samples</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.edge_detection" title="Permalink to this definition">¶</a></dt>
+<dd><p>To detect the edges of the wells, fill and label them to
+determine their centroids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flip_frames</strong> (<em>Array</em>) – The frames to be processed and determine the
+sample temperature from.</p></li>
+<li><p><strong>n_samples</strong> (<em>Int</em>) – The number of samples in the input video.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>labeled_samples</strong> – All the samples in the frame are labeled
+so that they can be used as props to get pixel data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.flip_frame">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">flip_frame</code><span class="sig-paren">(</span><em class="sig-param">frames</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.flip_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>To flip all the loaded frames horizontally and vertically
+to correct for the mirroring during recording.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>frames</strong> (<em>Array</em>) – An array containing an array for each frame
+in the video or just a single array in case of an image.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flip_frames</strong> – Flipped frames that can be processed to get temperature data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.inflection_point">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">inflection_point</code><span class="sig-paren">(</span><em class="sig-param">s_temp</em>, <em class="sig-param">p_temp</em>, <em class="sig-param">s_peaks</em>, <em class="sig-param">p_peaks</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.inflection_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to get the inflection point(melting point) for each sample.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_temp</strong> (<em>List</em>) – Sample temperature profiles</p></li>
+<li><p><strong>p_temp</strong> (<em>List</em>) – Plate location temperature profiles</p></li>
+<li><p><strong>s_peaks</strong> (<em>List</em>) – List of two highest peak(inflection points) indices in the
+temperature profile of the samples.</p></li>
+<li><p><strong>p_peaks</strong> (<em>List</em>) – List of two highest peak(inflection points) indices in the
+temperature profile of the plate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>inf_temp</strong> – List of temperature at inflection points for each sample</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.inflection_temp">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">inflection_temp</code><span class="sig-paren">(</span><em class="sig-param">frames</em>, <em class="sig-param">n_rows</em>, <em class="sig-param">n_columns</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.inflection_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to obtain sample temperature and plate temperature
+in every frame of the video using edge detection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frames</strong> (<em>List</em>) – An list containing an array for each frame
+in the video or just a single array in case of an image.</p></li>
+<li><p><strong>n_rows</strong> (<em>List</em>) – Number of rows of sample</p></li>
+<li><p><strong>n_columns</strong> (<em>List</em>) – Number of columns of sample</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flip_frames</strong> (<em>Array</em>) – An array of images which are flipped to correct the
+rotation caused by the IR camera</p></li>
+<li><p><strong>regprops</strong> (<em>Dict</em>) – A dictionary of dataframes containing temperature data.</p></li>
+<li><p><strong>s_temp</strong> (<em>List</em>) – A list containing a list a temperatures for each sample
+in every frame of the video</p></li>
+<li><p><strong>plate_temp</strong> (<em>List</em>) – A list containing a list a temperatures for each plate
+location in every frame of the video.</p></li>
+<li><p><strong>inf_temp</strong> (<em>List</em>) – A list containing melting point of all the samples obtained by the plot.</p></li>
+<li><p><strong>m_df</strong> (<em>Dataframe</em>) – A dataframe containing row and column coordinates of each sample
+and its respective inflection point obtained.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.input_file">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">input_file</code><span class="sig-paren">(</span><em class="sig-param">file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.input_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>To load the imput file as an array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>String</em>) – Name of the file to be loaded as it is saved on the disk.
+Provide file path if it is not in the same directory as the jupyter notebook.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>frames</strong> – In case of a video, returns an array for each frame
+in the video. In case of an image, return an array.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.peak_detection">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">peak_detection</code><span class="sig-paren">(</span><em class="sig-param">temp_profiles</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.peak_detection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to determine inflection point in the sample temperature
+profile(melting point)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temp</strong> (<em>List</em>) – Temperature of all the samples or plate locations in every frame of the video.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>peaks</strong> (<em>List</em>) – List of two highest peak(inflection points) indices in the
+given temperature profiles.</p></li>
+<li><p><strong>infl</strong> (<em>List</em>) – List of temperature at inflection points for given temperature profiles.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.regprop">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">regprop</code><span class="sig-paren">(</span><em class="sig-param">labeled_samples</em>, <em class="sig-param">frames</em>, <em class="sig-param">n_rows</em>, <em class="sig-param">n_columns</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.regprop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the area and centroid of all samples.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labeled_samples</strong> (<em>Array</em>) – An array with labeled samples.</p></li>
+<li><p><strong>flip_frames</strong> (<em>Array</em>) – Original intensity image to determine
+the intensity at sample centroids.</p></li>
+<li><p><strong>n_rows</strong> (<em>Int</em>) – Number of rows of sample</p></li>
+<li><p><strong>n_columns</strong> (<em>Int</em>) – Number of columns of sample</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>regprops</strong> – A dictionary of dataframes with information about samples in every
+frame of the video.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.sample_temp">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">sample_temp</code><span class="sig-paren">(</span><em class="sig-param">sorted_regprops</em>, <em class="sig-param">frames</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.sample_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to concatenate all the obtained temperature data
+from the pixel values into lists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sorted_regprops</strong> (<em>Dict</em>) – The dictionary of sorted dataframes containing temperature data.</p></li>
+<li><p><strong>frames</strong> (<em>Array</em>) – The array of frames to be processed to obtain temperature data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>temp</strong> (<em>List</em>) – Temperature of all the samples in every frame of the video.</p></li>
+<li><p><strong>plate_temp</strong> (<em>List</em>) – Temperature of the plate next to every sample in every
+frame of the video.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.edge_detection.sort_regprops">
+<code class="sig-prename descclassname">musicalrobot.edge_detection.</code><code class="sig-name descname">sort_regprops</code><span class="sig-paren">(</span><em class="sig-param">regprops</em>, <em class="sig-param">n_columns</em>, <em class="sig-param">n_rows</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.edge_detection.sort_regprops" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to sort the regprops to match the order in which the samples
+are pipetted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regprops</strong> (<em>Dict</em>) – A dictionary of dataframes containing information about the sample.</p></li>
+<li><p><strong>n_columns</strong> (<em>Int</em>) – Number of columns of samples</p></li>
+<li><p><strong>n_rows</strong> (<em>Int</em>) – Number of rows of samples</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sorted_regprops</strong> – A dictionary of dataframe with information about samples in every
+frame of the video. The order of the samples is sorted from top to bottom and from
+left to right.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-musicalrobot.pixel_analysis">
+<span id="pixel-analysis"></span><h2>pixel_analysis<a class="headerlink" href="#module-musicalrobot.pixel_analysis" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="musicalrobot.pixel_analysis.image_eq">
+<code class="sig-prename descclassname">musicalrobot.pixel_analysis.</code><code class="sig-name descname">image_eq</code><span class="sig-paren">(</span><em class="sig-param">n_frames</em>, <em class="sig-param">frames</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.pixel_analysis.image_eq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to obtained an equalized image using all the frames
+in the video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_frames</strong> (<em>Int</em>) – The number of frames in the video.</p></li>
+<li><p><strong>frames</strong> (<em>List</em>) – List of arrays of frames in the video.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>img_eq</strong> – Equalized image</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.pixel_analysis.locations">
+<code class="sig-prename descclassname">musicalrobot.pixel_analysis.</code><code class="sig-name descname">locations</code><span class="sig-paren">(</span><em class="sig-param">row_peak_indices</em>, <em class="sig-param">column_peak_indices</em>, <em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.pixel_analysis.locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to get location of all the samples(row and column) and their
+respective plate locations. (Same column but different rows)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row_peak_indices</strong> (<em>List</em>) – List containing the location of all the sample rows</p></li>
+<li><p><strong>column_peak_indices</strong> (<em>List</em>) – List containing the location of all the sample columns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sample_location</strong> – Dataframe containing sample location and plate location.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.pixel_analysis.peak_values">
+<code class="sig-prename descclassname">musicalrobot.pixel_analysis.</code><code class="sig-name descname">peak_values</code><span class="sig-paren">(</span><em class="sig-param">column_sum</em>, <em class="sig-param">row_sum</em>, <em class="sig-param">n_columns</em>, <em class="sig-param">n_rows</em>, <em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.pixel_analysis.peak_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to find peaks from the column_sum and row_sum arrays
+and return a dataframe with sample locations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>column_sum</strong> (<em>List</em>) – Sum of pixel values over all the columns in the
+image array.</p></li>
+<li><p><strong>row_sum</strong> (<em>List</em>) – Sum of pixel values over all the rows in the
+image array.</p></li>
+<li><p><strong>n_columns</strong> (<em>Int</em>) – Number of columns of samples in the image</p></li>
+<li><p><strong>n_rows</strong> (<em>Int</em>) – Number of rows of samples in the image.</p></li>
+<li><p><strong>image</strong> (<em>Array</em>) – Image to be processed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sample_location</strong> – A dataframe containing sample and plate locations and a plot with locations
+superimposed on the image to be processed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.pixel_analysis.pixel_intensity">
+<code class="sig-prename descclassname">musicalrobot.pixel_analysis.</code><code class="sig-name descname">pixel_intensity</code><span class="sig-paren">(</span><em class="sig-param">sample_location</em>, <em class="sig-param">frames</em>, <em class="sig-param">x_name</em>, <em class="sig-param">y_name</em>, <em class="sig-param">plate_name</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.pixel_analysis.pixel_intensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to find pixel intensity at all sample locations
+and plate locations in each frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sample_location</strong> (<em>Dataframe</em>) – A dataframe containing sample and plate locations.</p></li>
+<li><p><strong>frames</strong> (<em>Array</em>) – An array of arrays containing all the frames of a video.</p></li>
+<li><p><strong>x_name</strong> (<em>String</em>) – Name of the column in sample_location containing the row values of the samples.</p></li>
+<li><p><strong>y_name</strong> (<em>String</em>) – Name of the column in sample_location containing the column values of the samples.</p></li>
+<li><p><strong>plate_name</strong> (<em>String</em>) – Name of the column in sample_location containing the column values of the
+plate location.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>temp</strong> (<em>List</em>) – Temperature of all the samples in every frame of the video.</p></li>
+<li><p><strong>plate_temp</strong> (<em>List</em>) – Temperature of the plate next to every sample in every
+frame of the video.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.pixel_analysis.pixel_sum">
+<code class="sig-prename descclassname">musicalrobot.pixel_analysis.</code><code class="sig-name descname">pixel_sum</code><span class="sig-paren">(</span><em class="sig-param">img_eq</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.pixel_analysis.pixel_sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Funtion to determine sum of pixels over all the rows and columns
+to obtain plots with peaks at the sample position in the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>img_eq</strong> (<em>Array</em>) – Equalized image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>column_sum</strong> (<em>List</em>) – Sum of pixels over all the columns</p></li>
+<li><p><strong>row_sum</strong> (<em>List</em>) – Sum of pixels over all the rows
+Also returns plots of column sum and row sum.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.pixel_analysis.pixel_temp">
+<code class="sig-prename descclassname">musicalrobot.pixel_analysis.</code><code class="sig-name descname">pixel_temp</code><span class="sig-paren">(</span><em class="sig-param">frames</em>, <em class="sig-param">n_frames</em>, <em class="sig-param">n_columns</em>, <em class="sig-param">n_rows</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.pixel_analysis.pixel_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to determine the temperature of the samples and plate locations by analysing
+pixel values and finding peaks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frames</strong> (<em>Array</em>) – The frames of a video to be analysed.</p></li>
+<li><p><strong>n_frames</strong> (<em>Int</em>) – Number of frames in the video</p></li>
+<li><p><strong>n_columns</strong> (<em>Int</em>) – Number of columns of samples in the image</p></li>
+<li><p><strong>n_rows</strong> (<em>Int</em>) – Number of rows of samples in the image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>m_df</strong> – A dataframe containing row and column coordinates of each sample
+and its respective inflection point obtained.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-musicalrobot.post_data">
+<span id="post-data"></span><h2>post_data<a class="headerlink" href="#module-musicalrobot.post_data" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="musicalrobot.post_data.export_csv">
+<code class="sig-prename descclassname">musicalrobot.post_data.</code><code class="sig-name descname">export_csv</code><span class="sig-paren">(</span><em class="sig-param">final_data</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.post_data.export_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports the dataframe of the run into a csv file to be saved or modifed as desired</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>final_data</strong> (<em>Dataframe</em>) – A dataframe containing the final melting point data of all the samples.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Prompt to save the data to a csv.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-musicalrobot.irtemp">
+<span id="irtemp"></span><h2>irtemp<a class="headerlink" href="#module-musicalrobot.irtemp" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="musicalrobot.irtemp.centikelvin_to_celsius">
+<code class="sig-prename descclassname">musicalrobot.irtemp.</code><code class="sig-name descname">centikelvin_to_celsius</code><span class="sig-paren">(</span><em class="sig-param">temp</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.irtemp.centikelvin_to_celsius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts given centikelvin value to Celsius</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temp</strong> (<em>Float</em>) – The value of the temperature to be converted in centikelvin</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cels</strong> – The converted value of the temperature in degree celcius</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.irtemp.to_fahrenheit">
+<code class="sig-prename descclassname">musicalrobot.irtemp.</code><code class="sig-name descname">to_fahrenheit</code><span class="sig-paren">(</span><em class="sig-param">temp</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.irtemp.to_fahrenheit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts given centikelvin value to Celsius</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temp</strong> (<em>Float</em>) – The value of the temperature to be converted in centikelvin</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>fahr</strong> – The converted value of the temperature in degree fahrenheit</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="musicalrobot.irtemp.to_temperature">
+<code class="sig-prename descclassname">musicalrobot.irtemp.</code><code class="sig-name descname">to_temperature</code><span class="sig-paren">(</span><em class="sig-param">temp</em><span class="sig-paren">)</span><a class="headerlink" href="#musicalrobot.irtemp.to_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts given centikelvin value to both fahrenheit and celcius</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temp</strong> (<em>Float</em>) – The value of the temperature to be converted in centikelvin</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>cels</strong> (<em>Float</em>) – The converted value of the temperature in degree celcius</p></li>
+<li><p><strong>fahr</strong> (<em>Float</em>) – The converted value of the temperature in degree fahrenheit</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Shrilakshmi Bonageri, Jaime Rodriguez, Sage Scheiwiller
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
