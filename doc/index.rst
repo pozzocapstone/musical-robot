@@ -32,10 +32,14 @@ irtemp
 .. automodule:: musicalrobot.irtemp
    :members:
 
+data_encoding
+--------------
+.. automodule:: musicalrobot.irtemp
+   :members:
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
 
 
 Indices and tables

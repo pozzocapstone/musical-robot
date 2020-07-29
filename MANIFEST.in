@@ -1,0 +1,2 @@
+recursive-include musicalrobot/models *
+recursive-include musicalrobot/data *
