@@ -28,7 +28,15 @@ Deep eutectic solvents (DES) are novel solvents that can be easily produced at l
 * Alternatively, centroid location for each sample can be found by summing pixel values over individual rows and columns of the sample holder(well plate).
 * This technique can be adapted by using the functions `input_file` and `pixel_temp` from the `musicalrobot.pixel_analysis` module to load the recorded video and obtain the temperature profile of the samples and sample holder.
 
-An example of adapting both the above mentioned techniques using the `musicalrobot` module can be found in the ipython notebook `Tutorial.ipynb` found in the examples folder.
+#### Inflection determination
+
+* An inflection is observed in the temperature profile of the samples due to the following reasons
+1. Change in thermal conductivity of the sample
+2. Increase in thermal contact between the sample and the well plate
+* The point of inflection in the temperature profile is determined by detecting the peak in the second derivative of the temperature profile. Since an analytical approach is used to determine the melting point, the temperature profile plots have to classified to eliminate plots with noise and without an inflection in them.
+* The module `musicalrobot.data_encoding` can be used to classify the temperature profiles.
+
+An example of adapting the above mentioned modules and functions using the `musicalrobot` package can be found in the ipython notebook `Tutorial.ipynb` found in the examples folder.
 
 ## For Development
 * Install python version 3.6
