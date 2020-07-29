@@ -20,7 +20,7 @@ from scipy.interpolate import interp1d
 from scipy.signal import filtfilt
 from scipy.interpolate import BSpline
 from irtemp import centikelvin_to_celsius
-from data_encoding import final_result
+import data_encoding as de
 
 
 # Function to load the input file
@@ -499,7 +499,7 @@ def inflection_temp(frames, n_rows, n_columns, path):
     # p_peaks, p_infl = peak_detection(s_temp, p_temp, 'Plate')
     # # Use the function 'infection_point' to obtain melting point of samples
     # inf_temp = inflection_point(s_temp, p_temp, s_peaks, p_peaks)
-    result_df = final_result(s_temp, p_temp, path)
+    result_df = de.final_result(s_temp, p_temp, path)
     # Creating a dataframe with row and column coordinates
     # of sample centroid and its melting temperature (Inflection point).
     m_df = pd.DataFrame({'Row': regprops[0].Row, 'Column': regprops[0].Column,
