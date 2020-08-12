@@ -8,7 +8,7 @@
 import setuptools
 
 setuptools.setup(name='musicalrobot',
-    version='0.992',
+    version='0.993',
     url = 'https://github.com/pozzocapstone/musical-robot',
     license = 'MIT',
     author = 'Shrilakshmi Bonageri, Jaime Rodriguez, Sage Scheiwiller',
